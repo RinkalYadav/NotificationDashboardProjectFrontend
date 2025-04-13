@@ -1,0 +1,38 @@
+.form { 
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+  label {
+    color: #333;
+  }
+  select, input {
+    cursor: pointer;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+  }
+ select:hover, select:focus, input:hover, input:focus {
+    border-color: #0056b3;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .form-inside {
+    margin-bottom: 15px;
+  }
+  .error-text {
+    color: red;
+   font-size: 14px;
+   margin-top: 5px;
+  }
+  
+  /* Red Border for Invalid Inputs */
+  .invalid {
+    border: 2px solid red !important;
+  }

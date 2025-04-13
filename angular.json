@@ -27,7 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -77,6 +78,7 @@
               "zone.js",
               "zone.js/testing"
             ],
+            "frameworks": ["jasmine"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -92,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

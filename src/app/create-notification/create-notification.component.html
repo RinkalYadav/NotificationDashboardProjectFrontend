@@ -1,0 +1,32 @@
+<main class="container align-middle ">
+<form class="form p-5 border-2 border border-primary rounded-4" (ngSubmit) ="onSubmit()">
+    <fieldset>
+      <div class="form-content">
+      <legend>Create Notification</legend>
+      <div class="form-inside">
+      <label class="fs-5 fw-semibold mb-1" for="">Notification Massege</label>
+      <input class="form-control" type="text" id="notifymsg" name="notifymsg" [(ngModel)]="notifymsg" placeholder="plz enter yout notification msg"
+      [class.invalid]="isSubmitted && notifymsg ===''">
+      <p *ngIf="isSubmitted && notifymsg === '' " class="error-text">Message is Required</p>
+    </div>
+    <div class="form-inside">
+      <label class="fs-5 fw-semibold mb-1 border-2" for="selcat">Notification Category</label>
+      <select class="form-control" name="selcat" id="selcat" [(ngModel)]="selectedCategory"
+        [class.invalid]="isSubmitted && selectedCategory ===''">
+        <option value="" disabled selected>Plz select your notification category</option>
+        <option value="error">Error</option>
+        <option value="success">Success</option>
+        <option value="alert">Alert</option>
+        <option value="message">Message</option>
+      </select>
+      <p *ngIf="isSubmitted && selectedCategory === '' " class="error-text">Category is Required</p>
+    </div>
+    <div class="d-grid">
+      <!-- <a [routerLink]="['/notification-list']"><button class="btn btn-primary" type="submit">Submit</button></a> -->
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>  
+    </div>
+    </fieldset>
+  </form>
+</main>
+<router-outlet />

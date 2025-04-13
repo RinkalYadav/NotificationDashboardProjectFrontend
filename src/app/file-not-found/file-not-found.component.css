@@ -1,0 +1,40 @@
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: #f9f9f9;
+  }
+  
+  .not-found-card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-code {
+    font-size: 100px;
+    color: #dc3545; /* Bootstrap's danger color */
+    margin: 0;
+  }
+  
+  .error-message {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #555;
+  }
+  
+  .home-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .home-link:hover {
+    border-bottom: 1px solid #007bff;
+  }
+  

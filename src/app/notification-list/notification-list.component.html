@@ -1,0 +1,49 @@
+<div class="nt">
+<main class="container align-middle ">
+    <h2>Received Data</h2>
+<div *ngIf="category === 'error'" class="alert alert-danger">
+    {{ message }} - {{ category}} 
+</div>
+<div *ngIf="category === 'success'" class="alert alert-success">
+    {{ message }} - {{ category }}
+  </div>
+
+  <div *ngIf="category === 'alert'" class="alert alert-warning">
+    {{ message }} - {{ category }}
+  </div>
+
+  <div *ngIf="category === 'message'" class="alert alert-primary">
+    {{ message }} - {{ category}}
+  </div>
+</main>
+
+<ng-container *ngFor="let val of listNotification;">
+  <div class="notistyle" [ngClass]="{
+    'alert' : true,
+    'alert-warning' : val.category === 'alert',
+    'alert-danger' : val.category === 'error',
+    'alert-success' : val.category === 'success',
+    'alert-primary' : val.category === 'message',
+  }">
+  <div class="d-flex justify-content-around" >
+    <div> <h4> Message</h4> <h6><ng-container *ngIf="!isclicked">{{ val.message }}</ng-container><ng-container *ngIf="isclicked"><input type="text" [(ngModel)]="val.message"/> </ng-container> </h6> </div> <div><h4> Category</h4> <h6> <ng-container *ngIf="!isclicked">{{ val.category }}</ng-container> <ng-container *ngIf="isclicked"> <select name="" id="" [(ngModel)]="val.category"> <option value="" disabled selected>Plz select your notification category</option>
+        <option value="error">Error</option>
+        <option value="success">Success</option>
+        <option value="alert">Alert</option>
+        <option value="message">Message</option></select></ng-container></h6> </div> <div><h4> Date</h4> <h6> {{val.timestamp | date:'short'}} </h6></div> 
+<div class="d-flex justify-content-evenly">
+  <button class="btn btn-sm mx-2" [ngClass]="{'btn-secondary': !isclicked, 'btn-success': isclicked }" (click)="updateNotification(val)"><ng-container *ngIf="!isclicked">Update</ng-container> <ng-container *ngIf="isclicked">Save </ng-container> </button>
+<button class="btn btn-danger btn-sm mx-2" (click)="deleteNotification(val.srno)">Delete</button>  
+</div>
+</div>
+</div>
+</ng-container>
+
+<!-- <ng-container *ngFor="let val of listNotification">
+  <div [ngStyle]="{'border' : getcolor(val.category), 'backgroundColor' : getcolor2(val.category), 'padding' : '17px' , 'margin' : '10px', 'borderRadius':'10px'}" >
+    {{val.message}} - {{ val.category }}
+  </div>
+</ng-container> -->
+
+
+</div>
