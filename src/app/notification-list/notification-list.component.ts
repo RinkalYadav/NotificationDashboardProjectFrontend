@@ -107,6 +107,6 @@ export class NotificationListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
-    this.websocketService.disconnect();
+    // this.websocketService.disconnect();
   }
 }
