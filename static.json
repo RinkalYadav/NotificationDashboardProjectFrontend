@@ -1,0 +1,7 @@
+{
+  "root": "dist/notification-dashboard-app/browser/",
+  "cleanUrls": true,
+  "routes": {
+    "/**": "index.html"
+  }
+}
