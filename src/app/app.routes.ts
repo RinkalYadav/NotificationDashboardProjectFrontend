@@ -8,7 +8,7 @@ import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     {path: '',component:AppComponent},
-    {path: 'creat-notification',component:CreateNotificationComponent},
+    {path: 'create-notification',component:CreateNotificationComponent},
     {path: 'notification-list',component:NotificationListComponent},
     {path: '**',component:FileNotFoundComponent}
 ];
