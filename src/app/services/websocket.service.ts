@@ -16,7 +16,7 @@ export class WebsocketService implements OnDestroy {
   constructor() {
     this.stompClient = new Client({
       brokerURL: '',
-      webSocketFactory: () => new SockJS('http://localhost:8080/ws'),
+      webSocketFactory: () => new SockJS('https://notificationdashboardbackend.onrender.com/ws'),
       reconnectDelay: 5000,
       debug: (str) => console.log('[WebSocket]', str),
     });

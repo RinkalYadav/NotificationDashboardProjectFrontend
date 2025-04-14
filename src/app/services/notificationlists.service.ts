@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class NotificationlistsService {
-  url = "http://localhost:8080/notification";
+  url = "https://notificationdashboardbackend.onrender.com/notification";
   constructor(private http:HttpClient) { }
 
   users(){
