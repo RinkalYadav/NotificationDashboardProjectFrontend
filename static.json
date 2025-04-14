@@ -1,6 +1,6 @@
 
 {
-  "root": "dist/notification-dashboard-app/",
+  "root": "dist/notification-dashboard-app/browser/",
   "cleanUrls": true,
   "rewrites": [
     { "source": "**", "destination": "/index.html" }

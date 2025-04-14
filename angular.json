@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/notification-dashboard-app",
+            "outputPath": "dist/notification-dashboard-app/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
